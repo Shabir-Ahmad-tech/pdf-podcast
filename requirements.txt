@@ -1,0 +1,6 @@
+streamlit
+PyMuPDF
+edge-tts
+pydub
+python-dotenv
+requests

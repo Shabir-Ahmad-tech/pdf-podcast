@@ -139,25 +139,23 @@ def generate_script(text: str) -> str:
     trimmed = text[:5000]
 
     prompt = f"""You are a professional podcast scriptwriter.
-
-Turn the content below into a natural, engaging 4-5 minute podcast conversation between:
+    
+Turn the content below into a natural, engaging 2-3 minute podcast conversation between:
 - Alex: the main host. Explains clearly, uses simple language.
 - Sara: the co-host. Asks great questions, adds insights, reacts naturally.
 
-TONE: Conversational, warm, and educational. Not robotic or academic.
-Use natural phrases like: "That's really interesting!", "So basically what you're saying is...", "Right, and the key thing here is..."
+TONE: Conversational, warm, and educational.
+Use natural phrases like: "That's really interesting!", "Right, and the key thing is..."
 
 FORMAT — follow exactly, no exceptions:
 Alex: [dialogue]
 Sara: [dialogue]
-Alex: [dialogue]
 ...
 
 RULES:
-- 12 to 18 exchanges total
-- No bullet points, no markdown, no asterisks, no stage directions
-- Each line must start with "Alex:" or "Sara:"
-- Total script: 600-900 words
+- 10 to 12 exchanges total
+- No bullet points, no markdown, no stage directions
+- Total script: 400-600 words
 - End with each host giving a short key takeaway
 
 CONTENT:

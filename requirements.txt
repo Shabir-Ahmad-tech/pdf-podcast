@@ -2,6 +2,6 @@ streamlit
 PyMuPDF
 edge-tts
 pydub
-pyaudioop
+audioop-lts
 python-dotenv
 requests

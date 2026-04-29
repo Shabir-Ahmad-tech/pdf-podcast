@@ -4,3 +4,10 @@ edge-tts
 pydub
 python-dotenv
 requests
+streamlit
+PyMuPDF
+edge-tts
+pydub
+python-dotenv
+requests
+pyaudioop

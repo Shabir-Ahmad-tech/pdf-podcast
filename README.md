@@ -60,7 +60,7 @@ Ensure **FFmpeg** is installed (required for audio stitching):
 ### 2. Environment Setup
 ```bash
 # Clone and enter the workspace
-git clone https://github.com/your-repo/pdf-podcast.git
+git clone https://github.com/Shabir-Ahmad-tech/pdf-podcast.git
 cd pdf-podcast
 
 # Initialize Virtual Environment

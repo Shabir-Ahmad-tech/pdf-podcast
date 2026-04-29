@@ -37,7 +37,7 @@ from pathlib import Path
 load_dotenv()
 
 OPENROUTER_KEY = os.getenv("OPENROUTER_API_KEY", "")
-AI_MODEL       = "google/gemini-2.0-flash-001"   # cheap + high quality
+AI_MODEL       = "google/gemini-flash-1.5"   # more stable + high capacity
 
 # Microsoft Neural voices via edge-tts (completely free)
 VOICES = {

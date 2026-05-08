@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Podcast Frontend - Visual Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .demo-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .demo-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+        }
+        
+        .demo-card h3 {
+            margin-bottom: 1rem;
+            color: #f8fafc;
+        }
+        
+        .demo-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        
+        .status-active {
+            background: #10b981;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+        }
+        
+        .status-inactive {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="glass-nav">
+            <div class="nav-content">
+                <div class="logo">Podcast<span>AI</span></div>
+                <div class="nav-actions">
+                    <ul class="nav-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    <button class="btn-primary-sm" onclick="alert('Launch Studio clicked!')">Launch Studio</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title reveal">Knowledge,<br><span>Re-Vocalized.</span></h1>
+                    <p class="hero-subtitle reveal">Transform dense documents into studio-quality conversations. Driven by Llama 3.1 & Microsoft Neural voices.</p>
+                    <div class="hero-btns reveal">
+                        <button class="btn-primary-lg" onclick="alert('Start Converting clicked!')">Start Converting</button>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal">
+                    <img src="hero.png" alt="Neural Visual" class="hero-img" onerror="this.style.backgroundColor='rgba(139, 92, 246, 0.1)'">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="demo-container">
+            <h1 class="demo-title">PDF Podcast Frontend - Visual Preview</h1>
+            
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <h3><span class="status-indicator status-active"></span> Color Scheme</h3>
+                    <p>Modern gradient-based color palette with purple (#8b5cf6) and cyan (#06b6d4) as primary colors. Dark theme with glassmorphism effects.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <h3><span class="status-indicator status-active"></span> Typography</h3>
+                    <p>Space Grotesk for headings and Inter for body text. Improved font hierarchy with better spacing and readability.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <h3><span class="status-indicator status-active"></span> Animations</h3>
+                    <p>Smooth hover effects, floating elements, pulse animations, and reveal animations for content loading.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <h3><span class="status-indicator status-active"></span> Interactive Elements</h3>
+                    <p>Enhanced buttons with gradient backgrounds, hover effects, and shine animations. Improved dropzone with drag-over states.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <h3><span class="status-indicator status-active"></span> Responsive Design</h3>
+                    <p>Mobile-first responsive design with breakpoints at 968px and 600px. Flexible grid layouts and adaptive components.</p>
+                </div>
+                
+                <div class="demo-card">
+                    <h3><span class="status-indicator status-active"></span> Visual Effects</h3>
+                    <p>Glassmorphism cards, gradient borders, shadow effects, background glows, and 3D perspective transforms.</p>
+                </div>
+            </div>
+            
+            <div class="demo-card">
+                <h2>Component Showcase</h2>
+                
+                <div style="margin: 2rem 0;">
+                    <h3>Buttons</h3>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+                        <button class="btn-primary-lg">Primary Large</button>
+                        <button class="btn-primary-sm">Primary Small</button>
+                        <button class="btn-secondary-sm">Secondary Small</button>
+                    </div>
+                </div>
+                
+                <div style="margin: 2rem 0;">
+                    <h3>Form Elements</h3>
+                    <div style="margin: 1rem 0;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: #cbd5e1; font-weight: 600;">Host Persona Style</label>
+                        <select id="demoSelector" style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); padding: 1rem; border-radius: 14px; color: white; font-family: inherit;">
+                            <option value="professional">Professional (NPR Style)</option>
+                            <option value="humorous">Humorous (Banter Mode)</option>
+                            <option value="deep_dive">Deep Dive (Technical)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="margin: 2rem 0;">
+                    <h3>Progress Tracker</h3>
+                    <div class="progress-steps">
+                        <div class="step active"><div class="dot"></div><span>Scan</span></div>
+                        <div class="step active"><div class="dot"></div><span>Script</span></div>
+                        <div class="step"><div class="dot"></div><span>Voice</span></div>
+                        <div class="step"><div class="dot"></div><span>Master</span></div>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 50%"></div>
+                    </div>
+                    <p class="status-text">Processing: Converting text to speech...</p>
+                </div>
+                
+                <div style="margin: 2rem 0;">
+                    <h3>Terminal Output</h3>
+                    <div class="terminal-container">
+                        <div class="terminal-header">
+                            <span>neural_script_stream.log</span>
+                            <div class="terminal-btns"><span></span><span></span><span></span></div>
+                        </div>
+                        <div class="terminal-content">
+                            <div>[14:32:45] SYS: Initializing upload for document.pdf...</div>
+                            <div>[14:32:46] INF: File size: 2.45 MB</div>
+                            <div>[14:32:47] SUC: Job 12345 assigned. Starting neural pipeline...</div>
+                            <div>[14:32:48] INF: Stage 1: PDF text extraction initialized</div>
+                            <div>[14:32:50] INF: Extracted 1,245 tokens from document</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-card" style="text-align: center;">
+                <h2>Visual Enhancements Complete! 🎉</h2>
+                <p style="color: #cbd5e1; margin: 1rem 0 2rem;">The PDF Podcast frontend has been transformed with modern design principles, improved UX, and visual polish.</p>
+                <button class="btn-primary-lg" onclick="window.open('index.html', '_blank')">View Full Frontend</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple demo interactions
+        document.querySelectorAll('.btn-primary-lg, .btn-primary-sm, .btn-secondary-sm').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if(this.textContent.includes('View Full')) return;
+                alert(`Button clicked: ${this.textContent}`);
+            });
+        });
+        
+        // Animate progress bar
+        setTimeout(() => {
+            const progressFill = document.querySelector('.progress-bar-fill');
+            progressFill.style.width = '75%';
+        }, 1000);
+    </script>
+</body>
+</html>

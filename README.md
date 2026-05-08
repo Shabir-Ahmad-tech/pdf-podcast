@@ -5,7 +5,7 @@
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://pdf-podcast.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Gemini](https://img.shields.io/badge/Powered%20by-Gemini%202.0%20Flash-4285F4?style=for-the-badge&logo=google)](https://deepmind.google/technologies/gemini/)
+[![Llama](https://img.shields.io/badge/Powered%20by-Llama%203.1%208B-0466c8?style=for-the-badge&logo=meta)](https://ai.meta.com/llama/)
 
 ---
 
@@ -40,7 +40,7 @@ PDF Upload → Text Extraction → AI Script Generation → Dual-Voice Synthesis
 ```
 
 1. **Extract** — PyMuPDF parses the PDF with high-fidelity text extraction
-2. **Script** — Gemini 2.0 Flash converts the content into a natural two-host dialogue
+2. **Script** — Llama 3.1 8B Instruct converts the content into a natural two-host dialogue
 3. **Synthesize** — Microsoft Neural TTS renders two distinct voice personalities in parallel
 4. **Stitch** — Pydub + FFmpeg merges the audio tracks into a single clean episode
 
@@ -61,8 +61,9 @@ The dialogue sounds like a real conversation — not a text-to-speech reading.
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| Frontend | Streamlit | Dark-mode UI, file upload, audio playback |
-| LLM | Gemini 2.0 Flash via OpenRouter | Intelligent script generation |
+| Frontend | Vanilla HTML/CSS/JS | 60fps animations, glassmorphism, luxury design |
+| Backend API | FastAPI | Asynchronous streaming and job management |
+| LLM | Llama 3.1 8B via OpenRouter | Intelligent script generation |
 | PDF Parsing | PyMuPDF (Fitz) | Accurate text extraction |
 | Voice Synthesis | Edge-TTS (Microsoft Neural) | Human-grade, zero-cost TTS |
 | Audio Processing | Pydub + FFmpeg | Parallel rendering and multi-track stitching |
@@ -128,10 +129,10 @@ Get your free API key at [openrouter.ai](https://openrouter.ai)
 ### Run
 
 ```bash
-streamlit run app.py
+uvicorn backend:app --reload
 ```
 
-Open `http://localhost:8501` in your browser.
+Open `http://localhost:8000` in your browser.
 
 ---
 
@@ -158,7 +159,11 @@ Open `http://localhost:8501` in your browser.
 
 ```
 pdf-podcast/
-├── app.py              # Main Streamlit application
+├── backend.py          # Main FastAPI application
+├── frontend/           # Premium HTML/CSS/JS UI
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
 ├── requirements.txt    # Python dependencies
 ├── packages.txt        # System-level packages (FFmpeg)
 ├── .python-version     # Python version pin

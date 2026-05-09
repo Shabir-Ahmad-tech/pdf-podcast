@@ -38,7 +38,7 @@ def main():
     print("📡 Launching FastAPI Backend...")
     # Using subprocess.Popen so it runs in the background
     backend_proc = subprocess.Popen(
-        [str(venv_python), "-m", "uvicorn", "backend:app", "--port", "8000"],
+        [str(venv_python), "-m", "uvicorn", "app:app", "--port", "8000"],
         cwd=str(root_dir)
     )
 

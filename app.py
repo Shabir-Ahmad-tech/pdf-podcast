@@ -13,7 +13,7 @@ from fastapi import FastAPI, File, UploadFile, BackgroundTasks, HTTPException
 from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-import fitz          # PyMuPDF
+import fitz         
 import edge_tts
 from pydub import AudioSegment
 import requests

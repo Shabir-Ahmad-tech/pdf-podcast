@@ -13,7 +13,7 @@ def check_ffmpeg():
         return False
 
 def main():
-    print("🚀 Starting PodcastAI Premium Studio...")
+    print("🚀 Starting PodcastAI Studio...")
     
     # 1. Check FFmpeg
     if not check_ffmpeg():

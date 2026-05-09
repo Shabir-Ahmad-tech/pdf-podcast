@@ -17,10 +17,12 @@
         <!-- Navigation -->
         <nav class="glass-nav">
             <div class="nav-content">
-                <div class="logo">Podcast<span>AI</span></div>
+                <div class="logo" onclick="document.getElementById('hero').scrollIntoView({behavior: 'smooth'})">Podcast<span>AI</span></div>
                 <div class="nav-actions">
                     <ul class="nav-links">
-                        <li><a href="#features">Features</a></li>
+                        <li><a href="#problem-solution">Solution</a></li>
+                        <li><a href="#presentation">Pipeline</a></li>
+                        <li><a href="#learnings">Learnings</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                     <button class="btn-primary-sm" onclick="document.getElementById('studio').scrollIntoView({behavior: 'smooth'})">Launch Studio</button>
@@ -29,21 +31,47 @@
         </nav>
 
         <!-- Hero Section -->
-        <header class="hero">
-            <div class="hero-container">
-                <div class="hero-content">
-                    <h1 class="hero-title reveal">Knowledge,<br><span>Re-Vocalized.</span></h1>
-                    <p class="hero-subtitle reveal">Transform dense documents into studio-quality conversations. Driven by meta-llama/llama-3.1-8b-instruct & Microsoft Neural voices.</p>
-                    <div class="hero-btns reveal">
-                        <button class="btn-primary-lg" onclick="document.getElementById('studio').scrollIntoView({behavior: 'smooth'})">Start Converting</button>
+        <header id="hero" class="hero">
+            <div class="hero-bg-aura"></div>
+            <div class="hero-container cinematic">
+                <div class="hero-content text-center">
+                    <p class="hero-eyebrow reveal">NEURAL AUDIO ENGINE</p>
+                    <h1 class="hero-title reveal">Turn Knowledge Into<br><span>Conversation.</span></h1>
+                    <p class="hero-subtitle reveal">Transform static PDFs into studio-quality podcasts. Driven by meta-llama/llama-3.1-8b-instruct & Microsoft Neural voices.</p>
+                    <div class="hero-btns justify-center reveal">
+                        <button class="btn-primary-lg" onclick="document.getElementById('studio').scrollIntoView({behavior: 'smooth'})">Launch Studio</button>
+                        <button class="btn-secondary-lg" onclick="document.getElementById('presentation').scrollIntoView({behavior: 'smooth'})">How It Works</button>
                     </div>
-                </div>
-                <div class="hero-image-wrapper reveal">
-                    <img src="hero.png" alt="Neural Visual" class="hero-img">
-                    <div class="image-overlay"></div>
                 </div>
             </div>
         </header>
+
+        <!-- Problem & Solution Section -->
+        <section id="problem-solution" class="presentation-section">
+            <div class="container-sm">
+                <div class="glass-card presentation-card reveal">
+                    <h2 class="section-title">The Problem & Our Solution</h2>
+                    <div class="split-content">
+                        <div class="problem-box">
+                            <h3 class="text-error mb-1">The Problem</h3>
+                            <ul class="learning-list">
+                                <li>Research papers & PDFs are dense and time-consuming to read.</li>
+                                <li>Students & professionals struggle to absorb long-form content.</li>
+                                <li>Existing TTS tools produce robotic, unengaging audio.</li>
+                            </ul>
+                        </div>
+                        <div class="solution-box">
+                            <h3 class="text-success mb-1">Our Solution</h3>
+                            <ul class="learning-list">
+                                <li>Upload any PDF — get a structured podcast dialogue instantly.</li>
+                                <li>RAG pipeline ensures absolute accuracy — zero AI hallucinations.</li>
+                                <li>Two AI personas (Alex & Sara) create a natural conversation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Main Studio Section -->
         <main id="studio" class="studio-section">
@@ -141,6 +169,157 @@
             </div>
         </section>
 
+        <!-- Presentation Sections -->
+        <section id="presentation" class="presentation-section">
+            <div class="container">
+                <div class="glass-card presentation-card reveal">
+                    <h2 class="section-title">The Neural Pipeline</h2>
+                    <p class="section-subtitle text-center">How we convert a static document into a dynamic conversation.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Ingestion & Extraction</h3>
+                                <p>User uploads a PDF. PyMuPDF extracts raw text, handling complex layouts.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>RAG Context Synthesis</h3>
+                                <p>LangChain and an ephemeral ChromaDB chunk and embed the text using local HuggingFace embeddings. We retrieve only the most relevant context to prevent AI hallucinations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>LLM Script Orchestration</h3>
+                                <p>Llama 3.1 (via OpenRouter) acts as the scriptwriter, crafting a 2-person dialogue based exclusively on the retrieved facts.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Neural Speech Synthesis</h3>
+                                <p>Dialogue lines are processed concurrently using Microsoft Edge TTS for lifelike intonation.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>Audio Mastering</h3>
+                                <p>Pydub and FFmpeg stitch the audio clips together with natural pauses into a final MP3.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Personas & Styles -->
+                <div class="glass-card presentation-card reveal mt-2">
+                    <h2 class="section-title">AI Personas & Styles</h2>
+                    <div class="personas-grid">
+                        <div class="persona-card">
+                            <div class="persona-avatar alex">A</div>
+                            <h4>Alex (Main Host)</h4>
+                            <p>Leads conversation, breaks down complex concepts, asks clarifying questions.</p>
+                        </div>
+                        <div class="persona-card">
+                            <div class="persona-avatar sara">S</div>
+                            <h4>Sara (Co-Host)</h4>
+                            <p>Provides insights, adds depth, challenges assumptions and summarises takeaways.</p>
+                        </div>
+                    </div>
+                    <div class="styles-grid mt-2">
+                        <div class="style-card">
+                            <h5>Professional (NPR Style)</h5>
+                            <p>Formal tone, structured delivery, suitable for academic & corporate content.</p>
+                        </div>
+                        <div class="style-card">
+                            <h5>Humorous (Talk Show)</h5>
+                            <p>Light-hearted, witty banter — great for making dry content approachable.</p>
+                        </div>
+                        <div class="style-card">
+                            <h5>Deep Dive (Seminar)</h5>
+                            <p>In-depth exploration for technical audiences — research papers & whitepapers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Architecture Flow -->
+                <div class="glass-card presentation-card reveal mt-2">
+                    <h2 class="section-title">Backend ↔ Frontend Architecture</h2>
+                    <div class="architecture-flow">
+                        <div class="arch-step">
+                            <h4>1. REST API Handshake</h4>
+                            <p>User uploads PDF. Backend validates & hands heavy processing to a background thread. Frontend gets Job ID instantly to stay responsive.</p>
+                        </div>
+                        <div class="arch-step">
+                            <h4>2. Server-Sent Events (SSE)</h4>
+                            <p>Persistent connection PUSHES progress (e.g., 'Synthesizing voices… 80%'). Live logs stream to the Neural Terminal UI without polling.</p>
+                        </div>
+                        <div class="arch-step">
+                            <h4>3. Unified Hosting</h4>
+                            <p>FastAPI serves both API + Frontend (HTML/CSS/JS) on a single port. No CORS issues, simple one-command deployment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="glass-card presentation-card reveal mt-2">
+                    <h2 class="section-title">Tech Stack & Jargon</h2>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">⚡</div>
+                            <h4>FastAPI</h4>
+                            <p>High-speed Python web framework driving the backend logic and Server-Sent Events (SSE) for real-time UI updates.</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🧠</div>
+                            <h4>RAG</h4>
+                            <p><strong>Retrieval-Augmented Generation.</strong> Forces the AI to read your specific document before speaking, ensuring absolute factual accuracy.</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🗄️</div>
+                            <h4>Vector Database</h4>
+                            <p>We use <strong>ChromaDB</strong> to store text as numbers (embeddings), allowing us to search the PDF by <em>meaning</em> rather than exact keywords.</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🎙️</div>
+                            <h4>Neural TTS</h4>
+                            <p>Advanced AI models that don't just read text, but understand context to add breaths, pauses, and emotion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenges & Learnings -->
+                <div class="glass-card presentation-card reveal mt-2">
+                    <h2 class="section-title">Challenges & Key Learnings</h2>
+                    <div class="split-content">
+                        <div>
+                            <h3 class="mb-1 text-primary">Challenges Faced</h3>
+                            <ul class="learning-list">
+                                <li>Real-time progress streaming with SSE required careful async handling in FastAPI.</li>
+                                <li>PDF layouts with columns & tables needed custom extraction logic via PyMuPDF.</li>
+                                <li>Prompt engineering to maintain consistent persona voices across long dialogues.</li>
+                                <li>Concurrently generating & ordering audio clips without desync in Pydub.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-1 text-secondary">Key Learnings</h3>
+                            <ul class="learning-list">
+                                <li>RAG is not just for chatbots — it's a core accuracy layer for any generative pipeline.</li>
+                                <li>SSE is a superior alternative to polling for real-time UX — simpler and more efficient.</li>
+                                <li>Neural TTS (edge-tts) can rival paid APIs with the right voice config & pausing.</li>
+                                <li>Full-stack AI apps need end-to-end thinking — from chunking strategy to audio format.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <!-- FAQ Section -->
         <section id="faq" class="faq-section">
             <div class="container-sm">
@@ -153,6 +332,14 @@
                     <div class="faq-item glass-card">
                         <h4>Commercial usage?</h4>
                         <p>Absolutely. The generated audio is yours to use anywhere.</p>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <h4>What happens if the PDF is too long?</h4>
+                        <p>The RAG pipeline automatically chunks the document and only extracts the most relevant sections based on semantic search, ensuring the AI never gets overwhelmed by large files.</p>
+                    </div>
+                    <div class="faq-item glass-card">
+                        <h4>Why two personas?</h4>
+                        <p>Having two hosts (Alex and Sara) creates dynamic banter. It breaks down complex topics naturally, making dense academic or professional content much easier to digest.</p>
                     </div>
                 </div>
             </div>

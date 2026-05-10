@@ -2,7 +2,6 @@
 
 > Transform any PDF into a studio-quality, dual-host audio podcast in under 60 seconds.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://pdf-podcast.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 [![Llama](https://img.shields.io/badge/Powered%20by-Llama%203.1%208B-0466c8?style=for-the-badge&logo=meta)](https://ai.meta.com/llama/)
@@ -22,14 +21,6 @@ Reading research papers and long documents is slow, isolating, and mentally exha
 PodcastAI is an open-source audio intelligence engine that converts any PDF into a natural, engaging two-host podcast — complete with distinct voice personalities, fluid dialogue, and professional audio quality — for less than $0.001 per episode.
 
 No studio. No equipment. No hours of editing. Just upload and listen.
-
----
-
-## Live Demo
-
-**[▶ Try it now → pdf-podcast.streamlit.app](https://pdf-podcast.streamlit.app/)**
-
-Upload any PDF. Hit generate. Your podcast is ready in under 60 seconds.
 
 ---
 
